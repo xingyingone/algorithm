@@ -19,12 +19,11 @@ int maxint(int *a, int n, int m) {
 			if (imap.count(it->first - m)) {
 				res2 = imap[it->first] - imap[it->first - m];
 			}
-		}
-		else
-			return res;
+		}	
 		res = max(max(res1, res2), res);
 		++it;
 	}
+	return res;
 }
 void main() {
 	int a[] = {1,2,1,1,1,4,1,1,1,1,5,1,1,1,2};
